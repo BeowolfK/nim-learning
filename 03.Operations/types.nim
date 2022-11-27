@@ -1,8 +1,10 @@
 import std/strutils
 
 # Integer
-let a:int = 11
-let b:int = 4
+let
+    a = 4
+    b = 5
+
 echo "Integer : "
 echo "sum : ", a+b
 echo "substract : ", a - b
@@ -24,3 +26,15 @@ echo "multiply : ", f1 * f2
 echo "divide : ", f1 / f2
 # echo "euclidian : ", f1 div f2 #Impossible
 # echo "modulo : ", f1 mod f2 #Impossible too
+
+echo "=".repeat(15), "\n"
+
+#Relational operator
+echo "Relationnal :"
+echo "greater : ", a > b
+echo "greater or equal : ", a >= b
+echo "lower : ", a < b
+echo "lower or equal : ", a <= b
+echo "equal : ", a == b
+echo "not equal : ", a != b
+

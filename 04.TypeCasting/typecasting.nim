@@ -7,3 +7,9 @@ echo float(a) + b
 echo a + int(b)
 
 echo "1".parseInt() == 1
+
+var 
+    number: int = 44
+    itsAString: string = $number
+
+echo typeof(itsAString)

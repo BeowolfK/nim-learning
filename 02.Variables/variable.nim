@@ -20,6 +20,17 @@ let `this is a
 
 echo this_is_a_test == 42
 
+let
+    num0: int = 79 # decimal number
+    num1: int = 0x4F # hex number
+    num2: int = 0b1001111 # binary number
+    num3: int = 0o117 # octal number
+
+echo num0
+echo num1
+echo num2
+echo num3
+
 var
     var1 = 5.5
     var2 = 10
@@ -51,3 +62,46 @@ var variable = 5
 let A = variable + 4 #On other hand, let variable is evaluate at run time
 # Let variable is also constant so can be re-assigned
 echo A
+
+# Array
+var arr: array = ['a', 'b', 'c','d']
+echo("The first element of the array is ", arr[0])
+echo("Elements 0 to 2 in the array are ", arr[ 0 .. 2])
+
+# We can set a custom index range 
+var 
+    customArrayAlpha: array[-6 .. -3, char] = ['a', 'b', 'c', 'd']
+echo customArrayAlpha[-5] # output the second element
+echo customArrayAlpha[^1] # output last element
+
+var sequenceNum = @[4, 5, 6]
+echo sequenceNum.len
+sequenceNum.add(7)
+echo sequenceNum.len
+
+# Set (only ordinal value)
+var charSet: set[char]
+charSet = {'a', 'e', 'c', 'd'}
+echo 'c' in charSet
+
+# User defined type
+type
+    Book = tuple[name: string, publishYear: int]
+
+var
+    got: Book
+    lotr: Book
+got = ("A Game of Thrones", 1996)
+lotr = (name: "Lord of the Rings", publishYear: 1954)
+echo got.name # "A Game of Thrones"
+echo got.publishYear # 1996
+
+# Object
+
+type
+    Book2 = object
+        name: string
+        publishYear: int
+
+var hp = Book2(name: "Harry Potter", publishYear: 1997)
+echo hp.name
